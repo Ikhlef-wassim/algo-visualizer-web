@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting Algorithms Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="top">
+      <div>
+        <h1>Sorting Algorithms Visualizer</h1>
+        <p class="subtitle">Real-time comparison &amp; swap animation in Vanilla JS</p>
+      </div>
+      <div class="stats">
+        <span>Comparisons: <strong id="compCount">0</strong></span>
+        <span>Swaps: <strong id="swapCount">0</strong></span>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <select id="algoSelect" aria-label="Algorithm">
+        <option value="bubble">Bubble Sort — O(n²)</option>
+        <option value="selection">Selection Sort — O(n²)</option>
+        <option value="insertion">Insertion Sort — O(n²)</option>
+        <option value="quick">Quick Sort — O(n log n)</option>
+      </select>
+
+      <label>Size <input id="sizeSlider" type="range" min="12" max="60" value="32" /></label>
+      <label>Speed <input id="speedSlider" type="range" min="1" max="100" value="65" /></label>
+
+      <button id="shuffleBtn" class="secondary">New Array</button>
+      <button id="sortBtn">Sort</button>
+    </div>
+
+    <div id="bars" class="bars"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
